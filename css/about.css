@@ -270,6 +270,8 @@ section h2 {
 }
 .our-team .social li a:hover {
   color: #ffcc00;
+
+  /* color: white; */
 }
 .our-team .social li:last-child a {
   border-right: none;
