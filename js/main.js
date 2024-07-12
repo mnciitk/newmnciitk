@@ -205,7 +205,10 @@ window.onload = function () {
   // tl.from('.sec1',{duration: 0.5,x:'50px',opacity:0})
   tl.to(".sidenav", { duration: 0.5, opacity: 1 });
   tl.to(".head1", { duration: 0.5, opacity: 1 });
-  tl.to(".img1", { duration: 0.5, opacity: 1 }).call(scrolltrigg, []);
+  /* it is present but error is coming so this is comment out 
+  tl.to(".img1", { duration: 0.5, opacity: 1 }).call(scrolltrigg, []); */
+
+  tl.to(".img1", { duration: 0.5, opacity: 1 });
 };
 
 let touchstartX = 0;
