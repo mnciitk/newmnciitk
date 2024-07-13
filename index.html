@@ -26,6 +26,69 @@
     <script src="js/new.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/card.js"></script>
+    <script>
+      // Function to load content based on the state
+      function loadContent(state) {
+        if (!state) return;
+        const { page } = state;
+        switch (page) {
+          case "about":
+            // Load about content
+            window.location.href = "./about.html";
+            break;
+          case "events":
+            // Load events content
+            window.location.href = "./events.html";
+            break;
+          case "clubs":
+            // Load clubs content
+            window.location.href = "./club.html";
+            break;
+          case "upcoming":
+            // Load upcoming events content
+            window.location.href = "./UpEvents.html";
+            break;
+          case "facilities":
+            // Load facilities content
+            window.location.href = "./services.html";
+            break;
+          default:
+            // Load home content
+            window.location.href = "./index.html";
+            break;
+        }
+      }
+
+      // Function to handle view more clicks
+      function viewMore(page) {
+        history.pushState({ page }, null, `#${page}`);
+        loadContent({ page });
+      }
+
+      // Event listener for popstate
+      window.addEventListener("popstate", function (event) {
+        loadContent(event.state);
+      });
+
+      $(document).ready(function () {
+        // Attach click handlers
+        $(".vdes1").on("click", function () {
+          viewMore("about");
+        });
+        $(".vdes2").on("click", function () {
+          viewMore("events");
+        });
+        $(".vdes3").on("click", function () {
+          viewMore("clubs");
+        });
+        $(".vdes4").on("click", function () {
+          viewMore("upcoming");
+        });
+        $(".vdes5").on("click", function () {
+          viewMore("facilities");
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="loader-wrapper">
@@ -125,76 +188,31 @@
         <li class="nav-link active nav-link-ltr hoverable" onclick="abc('1')">
           <a>Home </a>
         </li>
-        <!--  <span>O</span>
-                    <span>M</span>
-                    <span>E</span> -->
-
         <li class="nav-link nav-link-ltr hoverable" onclick="abc('2')">
           <a>About us</a>
-          <!-- <span>B</span>
-                      <span>O</span>
-                      <span>U</span>
-                      <span>T</span>
-                      <span>U</span>
-                      <span>S</span> -->
         </li>
         <li class="nav-link nav-link-ltr hoverable" onclick="abc('3')">
           <a>Events</a>
-          <!--  <span>V</span>
-                    <span>E</span>
-                    <span>N</span>
-                    <span>T</span>
-                    <span>S</span>  -->
         </li>
         <li class="nav-link nav-link-ltr hoverable" onclick="abc('4')">
           <a>Clubs</a>
-          <!---   <span>L</span>
-                    <span>U</span>
-                    <span>B</span>
-                    <span>S</span>  -->
         </li>
         <li class="nav-link nav-link-ltr hoverable" onclick="abc('5')">
           <a>Upcoming</a>
-          <!--    <span>A</span>
-                    <span>L</span>
-                    <span>E</span>
-                    <span>N</span>
-                    <span>D</span>
-                    <span>A</span>
-                    <span>R</span> -->
         </li>
         <li class="nav-link nav-link-ltr hoverable" onclick="abc('6')">
           <a>Facilities</a>
-          <!--    <span>O</span>
-                    <span>L</span>
-                    <span>L</span>
-                    <span>O</span>
-                    <span>W</span> -->
         </li>
       </ul>
     </nav>
 
-    <div class="part03">
-      <!-- <img src="img/main.png" alt="" class="aimg"> -->
-    </div>
-    <div class="part13">
-      <!-- <img src="img/main.png" alt="" class="aimg"> -->
-    </div>
-    <div class="part23">
-      <!-- <img src="img/main.png" alt="" class="aimg"> -->
-    </div>
-    <div class="part33">
-      <!-- <img src="img/main.png" alt="" class="aimg"> -->
-    </div>
-    <div class="part43">
-      <!-- <img src="img/main.png" alt="" class="aimg"> -->
-    </div>
-    <div class="part53">
-      <!-- <img src="img/main.png" alt="" class="aimg"> -->
-    </div>
-    <div class="part63">
-      <!-- <img src="img/main.png" alt="" class="aimg"> -->
-    </div>
+    <div class="part03"></div>
+    <div class="part13"></div>
+    <div class="part23"></div>
+    <div class="part33"></div>
+    <div class="part43"></div>
+    <div class="part53"></div>
+    <div class="part63"></div>
 
     <div class="content">
       <div class="sec1">
@@ -216,9 +234,7 @@
             innumerable students.
           </p>
           <span class="view2">
-            <button class="btn hoverable vdes1" onclick="page()">
-              View More
-            </button>
+            <button class="btn hoverable vdes1">View More</button>
           </span>
         </div>
         <div class="part22">
@@ -229,16 +245,13 @@
       <div class="sec3 parallax">
         <div class="part31">
           <h1 class="head3">Events</h1>
-
           <p class="content3">
             The Media and Cultural Council at IITK organises Four events round
             the year. Including several workshops and competitions these events
             help campus community explore various cultural fields.
           </p>
           <span class="view3">
-            <button class="btn hoverable vdes2" onclick="eventfun()">
-              View More
-            </button>
+            <button class="btn hoverable vdes2">View More</button>
           </span>
         </div>
         <div class="part32">
@@ -252,17 +265,14 @@
           <p class="content4">
             The Media and Cultural Council at IITK is a hub for all activities
             about media and culture. A major part of these activities are
-            carried out by various Clubs and Societies .
+            carried out by various Clubs and Societies.
           </p>
           <span class="view4">
-            <button class="btn hoverable vdes3" onclick="club()">
-              View More
-            </button>
+            <button class="btn hoverable vdes3">View More</button>
           </span>
         </div>
         <div class="part42">
-          <img src="img/clubrhsold.png" alt class="img4" />
-          <!-- style="opacity: 1; transform: translate(40px, 0px) scale(0.9, 0.9);" -->
+          <img src="img/clubrhs.png" alt="" class="img4" />
         </div>
       </div>
 
@@ -271,34 +281,26 @@
           <h1 class="head5">Upcoming Events</h1>
           <p class="content5">
             All the Events going to be conducted by Council and Clubs and
-            Societies of the Council
+            Societies of the Council.
           </p>
           <span class="view5">
-            <button class="btn hoverable vdes4" onclick="up()">
-              View More
-            </button>
+            <button class="btn hoverable vdes4">View More</button>
           </span>
         </div>
         <div class="part52">
           <img src="img/calendarrhs.png" alt="" class="img5" />
         </div>
       </div>
+
       <div class="sec6 parallax">
         <div class="part61">
           <h1 class="head6">Facilities</h1>
           <p class="content6">
             Workshops Registrations, Movie Request, Club Room Booking, Equipment
-            Booking all at one place
+            Booking all at one place.
           </p>
-          <!-- <div class="pen-container">
-                          <a id="facebook" href="https://www.instagram.com/mnciitk/"></a>
-                          <a id="googleplus" href="https://www.youtube.com/user/fmciitkanpur/featured"></a>
-                          <a id="instagram" href="https://www.facebook.com/mnciitk"></a>
-                        </div> -->
           <span class="view6">
-            <button class="btn hoverable vdes5" onclick="serv()">
-              View More
-            </button>
+            <button class="btn hoverable vdes5">View More</button>
           </span>
         </div>
         <div class="part62">
@@ -306,6 +308,5 @@
         </div>
       </div>
     </div>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script><script src="js/card.js"></script> -->
   </body>
 </html>
