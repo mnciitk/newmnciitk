@@ -1,1 +1,5 @@
 img/
+!img/mncTeamAvtar/
+!img/mncTeamAvtar/*
+!img/coordiesfile/
+!img/coordiesfile/*
