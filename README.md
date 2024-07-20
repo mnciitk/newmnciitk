@@ -1,19 +1,16 @@
-before change
+# before change
 
-# mnciitk.github.io
+ mnciitk.github.io
 
 Website can be viewed at https://mnciitk.github.io/
 
 The website is hosted on IITK server and can be accessed at https://students.iitk.ac.in/mnc/
 
-during change
-
-# newmnciitk
-
+# during change
 this is the venkatesh website repo without changed anything right now , which has to be published .
 
-after changes 
-# newmnciitk
+#after changes 
+newmnciitk
 all required changes are done.
 Photos of new tenure are added.
 Centre allign some social handles.
