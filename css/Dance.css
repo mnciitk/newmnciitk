@@ -247,6 +247,20 @@ section h3 {
 .row {
   margin: 0px 30px;
 }
+/* for get touch centre */
+/* it starts here  */
+
+.get-touch {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.row-get-touch {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap between the columns as needed */
+}
+/* it ends here */
 
 .our-team {
   text-align: center;
@@ -554,10 +568,27 @@ footer .foot-text {
   margin: 0 auto;
   max-width: 1050px;
 }
+
+/* column-contact before updating 
 .column-contact {
   width: 20%;
   margin-left: auto;
+}*/
+
+/* column-contact after updating starts here */
+.column-contact {
+  /* display: flex;
+
+  flex-direction: column;
+  align-items: center; */
+  width: 30%;
+  margin-left: auto;
 }
+.column-contact a {
+  margin-bottom: 10px;
+}
+/* ends here */
+
 .column-contact p {
   font-size: 17px;
   margin-top: 0;
