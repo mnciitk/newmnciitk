@@ -9,7 +9,7 @@ The website is hosted on IITK server and can be accessed at https://students.iit
 # during change
 this is the venkatesh website repo without changed anything right now , which has to be published .
 
-#after changes 
+# after changes 
 newmnciitk
 all required changes are done.
 Photos of new tenure are added.
